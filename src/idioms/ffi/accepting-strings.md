@@ -64,7 +64,7 @@ pub mod unsafe_module {
 
 ## Advantages
 
-The example is is written to ensure that:
+The example is written to ensure that:
 
 1. The `unsafe` block is as small as possible.
 2. The pointer with an "untracked" lifetime becomes a "tracked" shared reference
@@ -118,7 +118,7 @@ This code in inferior to the original in two respects:
 1. There is much more `unsafe` code, and more importantly, more invariants it
    must uphold.
 2. Due to the extensive arithmetic required, there is a bug in this version that
-   cases Rust `undefined behaviour`.
+   causes Rust `undefined behaviour`.
 
 The bug here is a simple mistake in pointer arithmetic: the string was copied,
 all `msg_len` bytes of it. However, the `NUL` terminator at the end was not.
